@@ -246,24 +246,23 @@
       nav.classList.toggle("open");
     }
 
-    // NOVO: Fecha o menu ao clicar em qualquer link
     document.addEventListener("DOMContentLoaded", function () {
       const navLinks = document.querySelectorAll("nav a");
+      const nav = document.querySelector("nav");
+
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
-          const nav = document.querySelector("nav");
           nav.classList.remove("open");
         });
       });
     });
-    
   </script>
 </head>
 <body>
 
   <header>
-     <div class="header-content">
-     <!-- <img src="logo-ifsp.png" alt="Logo IFSP"> -->
+    <div class="header-content">
+      <!-- <img src="logo-ifsp.png" alt="Logo IFSP"> -->
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
     <nav>
@@ -281,11 +280,7 @@
     <p>Educação Inclusiva na Cultura Digital</p>
   </div>
 
-  <!-- Todas as seções seguem aqui como você já estruturou -->
-  <!-- Se quiser, posso colar o restante do conteúdo também com esse menu aplicado -->
-
-
-    <section id="apresentacao">
+  <section id="apresentacao">
     <h2>🎓 Apresentação do curso</h2>
     <p>O curso tem como propósito oferecer formação continuada com qualidade socialmente referenciada para que professoras e professores que atuam preferencialmente no Ensino Fundamental II e no Ensino Médio, assim como outros(as) profissionais da educação, possam promover processos educacionais ativos, inovadores, inclusivos e reflexivos, utilizando tecnologias digitais de forma ética e responsável.</p>
     <p><strong>Público-alvo:</strong> Professores(as) do Ensino Fundamental II e Médio, além de outros profissionais da educação.</p>
@@ -301,7 +296,7 @@
     <p>Formar especialistas capazes de promover práticas pedagógicas inclusivas e inovadoras na cultura digital.</p>
     <h3>Objetivos específicos</h3>
     <ul>
-      <li>Conhecer demandas educacionais atuais para aprimorar a prática profissional.</li>
+      <li>Conhecer demandas educacionais atuais para aprimorar a prática       profissional.</li>
       <li>Planejar ações que combatam discriminação e preconceito no ambiente escolar.</li>
       <li>Elaborar aulas e práticas educacionais e avaliações adaptadas às diversas necessidades.</li>
       <li>Utilizar tecnologias digitais de forma ética, crítica e responsável.</li>
@@ -438,4 +433,3 @@
 
 </body>
 </html>
-
