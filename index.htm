@@ -1,2 +1,429 @@
-<h1>Site da Pós-Gradução Lato Sensu: Educação Inclusiva na Cultura Digital</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pós-Graduação – Educação Inclusiva na Cultura Digital | IFSP Matão</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+    }
+
+    header {
+      background-color: #006837;
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: linear-gradient(135deg, #006837, #4caf50, #a5d6a7);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .banner h1 {
+      font-size: clamp(1.8em, 5vw, 2.6em);
+      margin-bottom: 12px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      white-space: nowrap;
+    }
+
+    .banner p {
+      font-size: clamp(1.2em, 4vw, 1.4em);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #006837;
+      margin-bottom: 20px;
+      border-left: 6px solid #f57c00;
+      padding-left: 10px;
+    }
+
+    section h3 {
+      color: #444;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .objetivos ul, .perfil ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .cta, .documentos a {
+      display: inline-block;
+      margin: 12px 10px 0 0;
+      padding: 12px 18px;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1em;
+      border: 1px solid #388e3c;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .cta {
+      background-color: #f57c00;
+      border-color: #e06f00;
+    }
+
+    .cta:hover {
+      background-color: #e06f00;
+    }
+
+    .documentos a:hover {
+      background-color: #388e3c;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.9em;
+      min-width: 600px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e0e0e0;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f5f5f5;
+    }
+
+    footer {
+      background-color: #006837;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      text-align: left;
+    }
+
+    .footer-content h4 {
+      margin: 0 0 8px 0;
+      color: #fff;
+    }
+
+    .footer-content p, .footer-content a {
+      color: #e6f3ea;
+      font-size: 0.9em;
+      margin: 4px 0;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #e6f3ea;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #006837;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 1.1em;
+      }
+
+      .banner {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .banner h1 {
+        font-size: 1.6em;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 24px 12px;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+     <div class="header-content">
+     <!-- <img src="logo-ifsp.png" alt="Logo IFSP"> -->
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <nav>
+      <a href="#apresentacao">Apresentação</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#perfil">Perfil do Egresso</a>
+      <a href="#curriculo">Estrutura Curricular</a>
+      <a href="#contato">Coordenação</a>
+      <a href="#documentos">Documentos</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h1>Pós-Graduação Lato Sensu</h1>
+    <p>Educação Inclusiva na Cultura Digital</p>
+  </div>
+
+  <!-- Todas as seções seguem aqui como você já estruturou -->
+  <!-- Se quiser, posso colar o restante do conteúdo também com esse menu aplicado -->
+
+
+    <section id="apresentacao">
+    <h2>🎓 Apresentação do curso</h2>
+    <p>O curso tem como propósito oferecer formação continuada com qualidade socialmente referenciada para que professoras e professores que atuam preferencialmente no Ensino Fundamental II e no Ensino Médio, assim como outros(as) profissionais da educação, possam promover processos educacionais ativos, inovadores, inclusivos e reflexivos, utilizando tecnologias digitais de forma ética e responsável.</p>
+    <p><strong>Público-alvo:</strong> Professores(as) do Ensino Fundamental II e Médio, além de outros profissionais da educação.</p>
+    <p><strong>Carga horária:</strong> 395,7 horas</p>
+    <p><strong>Duração:</strong> 2 semestres</p>
+    <p><strong>Formato de oferta:</strong> 100% a distância</p>
+    <a class="cta" href="#documentos">Baixar PPC e documentos</a>
+  </section>
+
+  <section id="objetivos" class="objetivos">
+    <h2>🎯 Objetivos</h2>
+    <h3>Objetivo geral</h3>
+    <p>Formar especialistas capazes de promover práticas pedagógicas inclusivas e inovadoras na cultura digital.</p>
+    <h3>Objetivos específicos</h3>
+    <ul>
+      <li>Conhecer demandas educacionais atuais para aprimorar a prática profissional.</li>
+      <li>Planejar ações que combatam discriminação e preconceito no ambiente escolar.</li>
+      <li>Elaborar aulas e práticas educacionais e avaliações adaptadas às diversas necessidades.</li>
+      <li>Utilizar tecnologias digitais de forma ética, crítica e responsável.</li>
+      <li>Exercer a prática profissional de maneira inovadora e reflexiva.</li>
+      <li>Comprometer-se com a aprendizagem ativa dos estudantes.</li>
+      <li>Planejar e executar projetos de ensino em diversos âmbitos educacionais.</li>
+    </ul>
+  </section>
+
+  <section id="perfil" class="perfil">
+    <h2>👤 Perfil do egresso</h2>
+    <p>O especialista em educação inclusiva na cultura digital é um profissional com saberes teóricos e práticos para atuar de maneira crítica, reflexiva, inovadora e ética no ambiente escolar, fazendo uso das tecnologias digitais para elaborar práticas pedagógicas ativas e mediar processos de ensino-aprendizagem inclusivos. Ao articular conhecimentos relacionados aos direitos humanos, às relações étnico-raciais e às necessidades educacionais específicas no contexto da cultura digital, promove aprendizagens contextualizadas e que respeitam as particularidades de cada educando.</p>
+  </section>
+
+  <section id="curriculo">
+    <h2>📘 Estrutura curricular</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Semestre</th>
+          <th>Disciplina</th>
+          <th>Código</th>
+          <th>Total de aulas</th>
+          <th>Carga horária</th>
+        </tr>
+        <tr>
+          <td>1º</td>
+          <td>Ambientação em EaD</td>
+          <td>E1EAD</td>
+          <td>19</td>
+          <td>15,8 h</td>
+        </tr>
+        <tr>
+          <td>1º</td>
+          <td>Cultura Digital</td>
+          <td>E1CDG</td>
+          <td>76</td>
+          <td>63,3 h</td>
+        </tr>
+        <tr>
+          <td>1º</td>
+          <td>Educação Especial e Inclusiva</td>
+          <td>E1EEI</td>
+          <td>76</td>
+          <td>63,3 h</td>
+        </tr>
+        <tr>
+          <td>1º</td>
+          <td>Tecnologias Digitais e Mídias Sociais na Educação</td>
+          <td>E1TMS</td>
+          <td>38</td>
+          <td>31,7 h</td>
+        </tr>
+        <tr>
+          <td>2º</td>
+          <td>Metodologias Ativas</td>
+          <td>E2MAV</td>
+          <td>76</td>
+          <td>63,3 h</td>
+        </tr>
+        <tr>
+          <td>2º</td>
+          <td>Relações Étnico-Raciais e Direitos Humanos</td>
+          <td>E2ERD</td>
+          <td>76</td>
+          <td>63,3 h</td>
+        </tr>
+        <tr>
+          <td>2º</td>
+          <td>Ambientes de Aprendizagem Móvel e IA na Educação</td>
+          <td>E2AIA</td>
+          <td>76</td>
+          <td>63,3 h</td>
+        </tr>
+        <tr style="background-color: #e0e0e0; font-weight: bold;">
+          <td colspan="3">Total obrigatório</td>
+          <td>437</td>
+          <td>364 h</td>
+        </tr>
+        <tr>
+          <td>Optativa</td>
+          <td>Libras – Língua Brasileira de Sinais</td>
+          <td>E2LIB</td>
+          <td>38</td>
+          <td>31,7 h</td>
+        </tr>
+        <tr style="background-color: #e0e0e0; font-weight: bold;">
+          <td colspan="3">Total geral</td>
+          <td>475</td>
+          <td>395,7 h</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>👥 Coordenação e contato</h2>
+    <p><strong>Coordenação:</strong> Profa. Dra. Luciane Penteado Chaquime — <a href="http://lattes.cnpq.br/6334000944566026" target="_blank" rel="noopener">Currículo Lattes</a></p>
+    <p><strong>E-mail:</strong> pgeid@ifsp.edu.br</p>
+    <p><strong>Campus:</strong> IFSP – Campus Matão</p>
+  </section>
+
+  <section id="documentos">
+    <h2>🗂️ Documentos para download</h2>
+    <div class="documentos">
+      <a href="PPC_Lato_Sensu_EAD_Educacao_Inclusiva_na_Cultura_Digital_12_05_25.pdf" target="_blank" rel="noopener">📑 Projeto Pedagógico do Curso (PPC)</a>
+      <a href="Resol_35_2025_Aprova_a_Implementacao_Educacao_Inclusiva_Cultura_Digital_MTO.pdf" target="_blank" rel="noopener">🧾 Resolução de aprovação (Conselho Superior)</a>
+      <a href="Estrutura_Curricular.pdf" target="_blank" rel="noopener">📘 Estrutura curricular (PDF)</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>IFSP – Campus Matão</h4>
+        <p>Rua Stefano D'Avassi, 625 – Nova Cidade</p>
+        <p>CEP: 15991-502 – Matão/SP</p>
+      </div>
+      <div>
+        <h4>Contatos</h4>
+        <p>Telefone: (16) 3506-0706</p>
+        <p>Site: <a href="http://mto.ifsp.edu.br" target="_blank" rel="noopener">mto.ifsp.edu.br</a></p>
+      </div>
+      <div>
+        <h4>Links úteis</h4>
+        <p><a href="https://www.ifsp.edu.br" target="_blank" rel="noopener">IFSP – Reitoria</a></p>
+        <p><a href="#documentos">Documentos do curso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © IFSP – Campus Matão. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
 
